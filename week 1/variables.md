@@ -70,6 +70,74 @@ var = 3.14      # Now it's a float
 print(type(var))  # <class 'float'>
 ```
 
+### What is Dynamic Typing?
+
+**Dynamic Typing** means that the type of a variable (whether it's an integer, string, list, etc.) is determined and checked **at runtime** (while the program is executing), not **at compile time** (before the program runs). In simpler terms:
+
+*   **You don't have to declare what type of data a variable will hold.**
+*   **The type of a variable can change throughout the program's life.**
+
+The variable itself has no type; it's just a label. The *object* (the value in memory) that the variable points to has a type.
+
+---
+
+### Contrast with Static Typing
+
+To understand dynamic typing, it's best to compare it to its opposite: **Static Typing**, used in languages like Java, C++, C#, and Go.
+
+In a statically-typed language, you must declare a variable's type upfront, and it **cannot change**.
+
+**Java (Statically-typed) Example:**
+```java
+// In Java, you MUST declare the type
+int number = 10; // 'number' is forever an integer
+String name = "Alice"; // 'name' is forever a String
+
+number = "Hello"; // ERROR: Compiler will FAIL here.
+// You cannot assign a String to an int variable.
+```
+
+**Python (Dynamically-typed) Example:**
+```python
+# In Python, you just assign the value.
+number = 10     # The object 10 is an integer. 'number' now refers to it.
+print(type(number)) # Output: <class 'int'>
+
+# Now, let's reassign it to a completely different type.
+number = "Hello"  # This is perfectly ALLOWED.
+# The variable 'number' now points to a string object.
+print(type(number)) # Output: <class 'str'>
+
+# Let's change it again!
+number = [1, 2, 3] # Now it points to a list.
+print(type(number)) # Output: <class 'list'>
+```
+As you can see, the same variable `number` happily references an integer, then a string, then a list. The Python interpreter figures out the type of the object each time the variable is used.
+
+---
+
+### How It Works: The "Label on the Box" Analogy
+
+Remember the variable-as-a-label analogy? Dynamic typing extends this perfectly.
+
+1.  You write `x = 5`.
+    *   Python creates an integer object `5` in memory.
+    *   It slaps the label `x` on that box.
+
+    
+
+2.  Later, you write `x = "Python"`.
+    *   Python creates a **new, separate** string object `"Python"` in memory.
+    *   It **peels the label `x` off the integer box** and **sticks it on the string box**.
+    *   The integer object `5` now has no labels pointing to it. Python's garbage collector will eventually clean it up and free that memory.
+
+    
+
+The label `x` isn't "an integer variable" or a "string variable". It's just a label that can be moved to any box, regardless of what's inside.
+
+---
+
+
 ## Data Types in Variables
 
 Variables can hold different data types:
