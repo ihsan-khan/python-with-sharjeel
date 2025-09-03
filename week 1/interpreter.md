@@ -1,4 +1,4 @@
-Excellent question. Understanding how the Python interpreter works gives you deep insight into why Python behaves the way it does. Let's break it down.
+Understanding how the Python interpreter works gives you deep insight into why Python behaves the way it does. Let's break it down.
 
 At its core, the Python interpreter is a **virtual machine** that executes a set of instructions. Its job is to take your human-readable source code (.py file) and translate it into actions your computer's CPU can perform.
 
