@@ -51,6 +51,8 @@ Before any code can be executed, the Python interpreter must first decode and va
 
 Think of this step as the interpreter reading your code line-by-line and breaking it down into its smallest, meaningful building blocks, called **tokens**. It's like splitting a sentence into individual words and punctuation.
 
+This two-step process is the compiler's essential first check. **Tokenization** verifies that all the "words" in your code are valid. **Parsing** verifies that you've put those words together into a valid "sentence." Only after your code passes both of these checks will it be compiled into bytecode and executed. This ensures that the interpreter only tries to run code that is syntactically correct.
+
 *   **What Happens:** The interpreter scans the raw text of your script and categorizes every character. For the line of code `result = 10 + 5`, the tokenizer doesn't see a sentence; it identifies five distinct tokens:
     *   `result` (an identifier/variable name)
     *   `=` (an operator)
@@ -71,9 +73,9 @@ Once the code is broken into tokens, the next step is to see if these tokens for
 *   **Error Checking:** This step catches all grammatical errors. It ensures there's a colon after an `if` statement, that indentation is correct, and that operators have the correct number of operands. If the rules are broken—for example, by writing `10 = result +`—the parser raises a **`SyntaxError`** and stops the process immediately.
 
 
+### Why This Matters
 
 
-This two-step process is the compiler's essential first check. **Tokenization** verifies that all the "words" in your code are valid. **Parsing** verifies that you've put those words together into a valid "sentence." Only after your code passes both of these checks will it be compiled into bytecode and executed. This ensures that the interpreter only tries to run code that is syntactically correct.
 ---
 
 ### 2. Compilation to Bytecode
