@@ -45,8 +45,6 @@ end
 
 When you run `python script.py`, the interpreter first reads your source code.
 
-### How the Python Interpreter Understands Your Code: Tokenization & Parsing
-
 Before any code can be executed, the Python interpreter must first decode and validate your source code. This initial "decoding" phase happens in two critical steps: **Tokenization** and **Parsing**.
 
 #### 1. Tokenization (Lexical Analysis): Breaking the Code into "Words"
@@ -72,7 +70,7 @@ Once the code is broken into tokens, the next step is to see if these tokens for
 
 *   **Error Checking:** This step catches all grammatical errors. It ensures there's a colon after an `if` statement, that indentation is correct, and that operators have the correct number of operands. If the rules are broken—for example, by writing `10 = result +`—the parser raises a **`SyntaxError`** and stops the process immediately.
 
-### Why This Matters
+## Why This Matters
 
 This two-step process is the compiler's essential first check. **Tokenization** verifies that all the "words" in your code are valid. **Parsing** verifies that you've put those words together into a valid "sentence." Only after your code passes both of these checks will it be compiled into bytecode and executed. This ensures that the interpreter only tries to run code that is syntactically correct.
 ---
