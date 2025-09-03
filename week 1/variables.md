@@ -58,18 +58,6 @@ x = y = z = 0
 
 Python is dynamically typed, meaning you don't need to declare variable types explicitly:
 
-```python
-# Variable can change type
-var = 10        # Now it's an integer
-print(type(var))  # <class 'int'>
-
-var = "Hello"   # Now it's a string
-print(type(var))  # <class 'str'>
-
-var = 3.14      # Now it's a float
-print(type(var))  # <class 'float'>
-```
-
 ### What is Dynamic Typing?
 
 **Dynamic Typing** means that the type of a variable (whether it's an integer, string, list, etc.) is determined and checked **at runtime** (while the program is executing), not **at compile time** (before the program runs). In simpler terms:
