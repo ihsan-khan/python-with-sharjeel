@@ -72,10 +72,6 @@ Once the code is broken into tokens, the next step is to see if these tokens for
 
 *   **Error Checking:** This step catches all grammatical errors. It ensures there's a colon after an `if` statement, that indentation is correct, and that operators have the correct number of operands. If the rules are broken—for example, by writing `10 = result +`—the parser raises a **`SyntaxError`** and stops the process immediately.
 
-
-### Why This Matters
-
-
 ---
 
 ### 2. Compilation to Bytecode
