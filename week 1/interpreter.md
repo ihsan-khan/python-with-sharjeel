@@ -45,16 +45,40 @@ end
 
 When you run `python script.py`, the interpreter first reads your source code.
 
-*   **Tokenization (Lexical Analysis):** The interpreter scans your code line by line and breaks it down into smallest meaningful units called **tokens**. For example, for the line `result = 10 + 5`, the tokens would be:
-    *   `result`
-    *   `=`
-    *   `10`
-    *   `+`
-    *   `5`
-    It identifies keywords (like `if`, `def`), operators (like `+`, `=`), identifiers (variable names), and literals (numbers, strings). This step catches simple errors like an unmatched parenthesis or an invalid character.
+Of course. Here is a combined and streamlined summary that integrates your points with my explanations.
 
-*   **Parsing (Syntax Analysis):** The parser takes this stream of tokens and checks if the sequence follows the **grammar rules** of the Python language. It ensures your code makes structural sense. Is there a colon after the `if` condition? Is the indentation correct? This step builds an **Abstract Syntax Tree (AST)**, a tree representation of your code's structure. If the grammar is wrong, you get a `SyntaxError`.
+***
 
+### How the Python Interpreter Understands Your Code: Tokenization & Parsing
+
+Before any code can be executed, the Python interpreter must first decode and validate your source code. This initial "decoding" phase happens in two critical steps: **Tokenization** and **Parsing**.
+
+#### 1. Tokenization (Lexical Analysis): Breaking the Code into "Words"
+
+Think of this step as the interpreter reading your code line-by-line and breaking it down into its smallest, meaningful building blocks, called **tokens**. It's like splitting a sentence into individual words and punctuation.
+
+*   **What Happens:** The interpreter scans the raw text of your script and categorizes every character. For the line of code `result = 10 + 5`, the tokenizer doesn't see a sentence; it identifies five distinct tokens:
+    *   `result` (an identifier/variable name)
+    *   `=` (an operator)
+    *   `10` (a number literal)
+    *   `+` (an operator)
+    *   `5` (a number literal)
+
+*   **Purpose:** This process identifies all keywords (like `if`, `def`), operators (like `+`, `=`), identifiers (variable names), and literals (numbers, strings). It catches simple, low-level errors like an unmatched parenthesis or an invalid character that doesn't belong in the Python language.
+
+#### 2. Parsing (Syntax Analysis): Checking the "Grammar"
+
+Once the code is broken into tokens, the next step is to see if these tokens form a valid, logical structure according to Python's **grammar rules**. It's no longer about the individual words, but about whether the sentence they form makes sense.
+
+*   **What Happens:** The parser takes the stream of tokens and checks their order and relationship against Python's strict syntax rules. It confirms that the sequence `[Variable] = [Number] + [Number]` is a valid assignment statement.
+
+*   **The Output - Abstract Syntax Tree (AST):** If the tokens are in a valid order, the parser builds an **Abstract Syntax Tree (AST)**, which is a tree-like representation of your code's structure. The AST is not a list of tokens; it's a structured diagram that encapsulates the logic: *"Assign the value of the expression (10 + 5) to the variable 'result'."*
+
+*   **Error Checking:** This step catches all grammatical errors. It ensures there's a colon after an `if` statement, that indentation is correct, and that operators have the correct number of operands. If the rules are broken—for example, by writing `10 = result +`—the parser raises a **`SyntaxError`** and stops the process immediately.
+
+### Why This Matters
+
+This two-step process is the compiler's essential first check. **Tokenization** verifies that all the "words" in your code are valid. **Parsing** verifies that you've put those words together into a valid "sentence." Only after your code passes both of these checks will it be compiled into bytecode and executed. This ensures that the interpreter only tries to run code that is syntactically correct.
 ---
 
 ### 2. Compilation to Bytecode
