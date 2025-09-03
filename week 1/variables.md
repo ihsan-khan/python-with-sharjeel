@@ -118,8 +118,6 @@ As you can see, the same variable `number` happily references an integer, then a
 
 ### How It Works: The "Label on the Box" Analogy
 
-Remember the variable-as-a-label analogy? Dynamic typing extends this perfectly.
-
 1.  You write `x = 5`.
     *   Python creates an integer object `5` in memory.
     *   It slaps the label `x` on that box.
