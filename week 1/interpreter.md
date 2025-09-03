@@ -45,10 +45,6 @@ end
 
 When you run `python script.py`, the interpreter first reads your source code.
 
-Of course. Here is a combined and streamlined summary that integrates your points with my explanations.
-
-***
-
 ### How the Python Interpreter Understands Your Code: Tokenization & Parsing
 
 Before any code can be executed, the Python interpreter must first decode and validate your source code. This initial "decoding" phase happens in two critical steps: **Tokenization** and **Parsing**.
