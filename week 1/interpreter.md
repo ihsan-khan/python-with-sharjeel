@@ -132,6 +132,8 @@ While the PVM is executing bytecode, other subsystems are constantly working:
 
 ---
 
+Your Python Code (.py) -> COMPILER -> Bytecode (.pyc) -> VIRTUAL MACHINE (PVM) -> Machine Code -> CPU
+
 ### Key Takeaways & Implications
 
 1.  **"Interpreted" is a Simplification:** Python is both compiled and interpreted. The compilation step (to bytecode) is hidden from the user.
