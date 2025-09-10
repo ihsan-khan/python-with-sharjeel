@@ -10,7 +10,7 @@ def multiply(x, y):
 # Regular Division (returns float)
 def divide(x, y):
     if y == 0:
-        return "Error! Division by zero."
+        raise ZeroDivisionError("Error! Division by zero.")
     return x / y
 
 def power(x, y):
@@ -22,13 +22,13 @@ def modulus(x, y):
 # Floor Division (returns integer)
 def floor_divide(x, y):
     if y == 0:
-        return "Error! Division by zero."
+        raise ZeroDivisionError("Error! Division by zero.")
     return x // y
 
 # Ceil Division (returns float)
 def ceil_divide(x, y):
     if y == 0:
-        return "Error! Division by zero."
+        raise ZeroDivisionError("Error! Division by zero.")
     return -(-x // y)
 
 # Main calculator function
