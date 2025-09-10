@@ -1,35 +1,34 @@
+import math 
+
 def add(x, y):
-    return x + y
+    return math.fsum([x, y])
 
 def subtract(x, y):
-    return x - y
+    return math.fsum([x, -y])
 
 def multiply(x, y):
-    return x * y
+    return math.fsum([x * y])
 
-# Regular Division (returns float)
 def divide(x, y):
     if y == 0:
         raise ZeroDivisionError("Error! Division by zero.")
-    return x / y
+    return math.fsum([x / y])
 
 def power(x, y):
-    return x ** y
+    return math.pow(x, y)
 
 def modulus(x, y):
-    return x % y
+    return math.fsum([x % y])
 
-# Floor Division (returns integer)
+# also add other useful operations
 def floor_divide(x, y):
     if y == 0:
         raise ZeroDivisionError("Error! Division by zero.")
-    return x // y
-
-# Ceil Division (returns float)
+    return math.floor(x / y)
 def ceil_divide(x, y):
     if y == 0:
         raise ZeroDivisionError("Error! Division by zero.")
-    return -(-x // y)
+    return math.ceil(x / y)
 
 # Main calculator function
 def calculator():
