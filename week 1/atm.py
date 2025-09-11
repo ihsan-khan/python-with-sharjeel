@@ -1,5 +1,5 @@
 def main():
-    balance = 1000.0
+    balance = 0
     
     print("Welcome to the ATM!")
     
@@ -31,6 +31,9 @@ def main():
         elif choice == '3':
             # Withdraw money
             try:
+                if balance <= 0:
+                    print("Insufficient funds. Your balance is $0.00.")
+                    continue
                 amount = float(input("Enter amount to withdraw: $"))
                 if amount <= 0:
                     print("Invalid amount. Please enter a positive number.")
