@@ -1,8 +1,22 @@
 def main():
     balance = 0
-    
+    pin = "1234"  # Set a default PIN
+    attempts = 0
+    max_attempts = 3
     print("Welcome to the ATM!")
     
+    while True:
+        entered_pin = input("Please enter your PIN: ")
+        if entered_pin == pin:
+            print("PIN accepted.")
+            break
+        else:
+            attempts += 1
+            print(f"Incorrect PIN. You have {max_attempts - attempts} attempts left.")
+            if attempts >= max_attempts:
+                print("Maximum attempts reached. Exiting.")
+                return
+
     while True:
         print("\nOptions:")
         print("1. Check Balance")
