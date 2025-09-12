@@ -32,6 +32,26 @@ fruits = ["apple", "banana", "cherry"]
 numbers = list((1, 2, 3, 4, 5))  # Note double parentheses
 ```
 
+Lists are created by placing items (elements) inside square brackets `[]`, separated by commas.
+
+```python
+# Empty list
+empty_list = []
+
+# List of integers
+numbers = [1, 2, 3, 4, 5]
+
+# List of strings
+fruits = ['apple', 'banana', 'cherry']
+
+# List with mixed data types
+mixed_list = [42, 'hello', 3.14, True]
+
+# List containing other lists (nested list)
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+```
+
+
 ## 2. Basic Operations
 
 ### Accessing Elements
@@ -237,29 +257,6 @@ deep_copy = copy.deepcopy(original)
 Lists are incredibly versatile and essential for Python programming. They're used in almost every Python application!
 
 Of course! Here is a comprehensive guide to lists in Python, from the basics to advanced techniques.
-
-
-
-## 1. Creating a List
-
-Lists are created by placing items (elements) inside square brackets `[]`, separated by commas.
-
-```python
-# Empty list
-empty_list = []
-
-# List of integers
-numbers = [1, 2, 3, 4, 5]
-
-# List of strings
-fruits = ['apple', 'banana', 'cherry']
-
-# List with mixed data types
-mixed_list = [42, 'hello', 3.14, True]
-
-# List containing other lists (nested list)
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-```
 
 ---
 
