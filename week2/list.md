@@ -444,4 +444,3 @@ if 90 in grades:
     print("Someone got a 90!")
 ```
 
-Lists are a fundamental part of Python programming. Mastering them is essential for effective coding.
