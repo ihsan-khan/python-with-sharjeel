@@ -87,19 +87,34 @@ fruits.extend(["date", "elderberry"])  # Adds two items
 fruits.insert(1, "blueberry")  # ["apple", "blueberry", "banana", "cherry"]
 ```
 
-### Removing Elements
+## 4. Removing Elements
+
+There are several ways to remove items from a list.
+
 ```python
-fruits = ["apple", "banana", "cherry", "banana"]
+fruits = ['apple', 'kiwi', 'blueberry', 'cherry', 'orange', 'mango', 'grape']
 
-# remove() - Remove first occurrence of value
-fruits.remove("banana")  # ["apple", "cherry", "banana"]
+# Remove a specific element by value
+fruits.remove('kiwi')
+print(fruits)  # 'kiwi' is gone
 
-# pop() - Remove and return element at index (default last)
-removed = fruits.pop(1)  # removes "cherry", returns "cherry"
+# Remove and return an element by index (default is last item)
+popped_item = fruits.pop(2) # Removes item at index 2 ('blueberry')
+print(popped_item) # Output: blueberry
+print(fruits)      # 'blueberry' is gone
 
-# clear() - Remove all elements
-fruits.clear()  # []
+# Remove all items
+fruits.clear()
+print(fruits)  # Output: []
+
+# The `del` keyword can also be used
+fruits = ['apple', 'banana', 'cherry']
+del fruits[0]  # Deletes the first element
+del fruits[:]  # Deletes all elements (like clear())
+# del fruits   # Deletes the entire list object
 ```
+
+---
 
 ### Finding Elements
 ```python
@@ -316,34 +331,7 @@ print(fruits)  # Output: ['apple', 'kiwi', 'blueberry', 'cherry', 'orange', 'man
 
 ---
 
-## 4. Removing Elements
 
-There are several ways to remove items from a list.
-
-```python
-fruits = ['apple', 'kiwi', 'blueberry', 'cherry', 'orange', 'mango', 'grape']
-
-# Remove a specific element by value
-fruits.remove('kiwi')
-print(fruits)  # 'kiwi' is gone
-
-# Remove and return an element by index (default is last item)
-popped_item = fruits.pop(2) # Removes item at index 2 ('blueberry')
-print(popped_item) # Output: blueberry
-print(fruits)      # 'blueberry' is gone
-
-# Remove all items
-fruits.clear()
-print(fruits)  # Output: []
-
-# The `del` keyword can also be used
-fruits = ['apple', 'banana', 'cherry']
-del fruits[0]  # Deletes the first element
-del fruits[:]  # Deletes all elements (like clear())
-# del fruits   # Deletes the entire list object
-```
-
----
 
 ## 5. Common List Methods and Operations
 
