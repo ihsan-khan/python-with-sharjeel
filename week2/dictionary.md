@@ -1,5 +1,3 @@
-# Python Dictionaries Explained
-
 ## What is a Dictionary?
 
 A dictionary in Python is a **collection of key-value pairs**. It's like a real-life dictionary where you look up a word (key) to find its definition (value).
