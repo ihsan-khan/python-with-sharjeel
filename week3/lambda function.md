@@ -1,5 +1,3 @@
-# Lambda Functions in Python - Complete Guide
-
 ## What is a Lambda Function?
 
 A **lambda function** is a small, anonymous function defined using the `lambda` keyword. Unlike regular functions defined with `def`, lambda functions are:
