@@ -52,7 +52,7 @@ print(squared)  # Output: [1, 4, 9, 16, 25]
 names = ['alice', 'bob', 'charlie']
 upper_names
 
-# Lambda Functions in Python - Complete Guide
+
 
 ## What is a Lambda Function?
 
