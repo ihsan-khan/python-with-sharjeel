@@ -12,33 +12,6 @@ A **lambda function** is a small, anonymous function defined using the `lambda` 
 lambda arguments: expression
 ```
 
-## Simple Examples
-
-### Basic Lambda Functions
-```python
-# Equivalent regular function
-def square(x):
-    return x * x
-
-# Lambda equivalent
-square_lambda = lambda x: x * x
-
-print(square(5))         # Output: 25
-print(square_lambda(5))  # Output: 25
-
-# Lambda function that adds two numbers
-add = lambda a, b: a + b
-print(add(10, 20))  # Output: 30
-
-# Lambda with no arguments
-greet = lambda: "Hello, World!"
-print(greet())  # Output: Hello, World!
-
-# Lambda with multiple arguments
-multiply = lambda x, y, z: x * y * z
-print(multiply(2, 3, 4))  # Output: 24
-```
-
 ## Lambda Functions with Built-in Functions
 
 ### 1. Using with `map()`
