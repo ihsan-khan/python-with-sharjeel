@@ -1,4 +1,4 @@
-# Python Helper Functions: Map, Filter, Reduce, and More - Detailed Guide
+# Python Helper Functions: Map, Filter, Reduce, and More -
 
 ## 1. `map()` Function
 
