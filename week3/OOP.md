@@ -43,8 +43,9 @@ print(dog1.name)     # "Buddy"
 ### Class = Car Blueprint
 ```python
 class Car:
+    # Class attribute - shared by ALL cars
     def __init__(self, brand, color):
-        self.brand = brand
+        self.brand = brand # Instance attribute - unique to each car
         self.color = color
         self.speed = 0
     
